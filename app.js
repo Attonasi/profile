@@ -1,6 +1,7 @@
 'use strict'
 
 var allPortfolioItems = [];
+var folderName = 'stuff';
 
 function MakePortfolio(folderName){
 
@@ -9,4 +10,9 @@ function MakePortfolio(folderName){
   allPortfolioItems.push(this);
 }
 
-new MakePortfolio(education);
+new MakePortfolio(folderName);
+
+$('#articleLink').click(function(){
+  $('#splash').hide();
+  $('#article').fadeIn();
+});
