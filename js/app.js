@@ -22,7 +22,10 @@ userStories.forEach(function(argle){
   allUserStories.push(new MakeUserStory(argle));
 })
 
-
+allUserStories.forEach(function(a){
+  // $('#articleTemplate').append(a.toHtml());
+  $('#userStories').append(a.toHtml());
+});
 
 $('#beginLink').click(function(){
   $(currentPageID).hide();
