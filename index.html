@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Profile Page</title>
+
+    <script id="articleTemplate" type="text/x-handlebars-template">
+      <article data-author="{{author}}" data-category="{{category}}">
+            <header>
+              <h2>{{title}}</h2>
+              <div class="byline">
+                <address><a href="index.html" >{{author}}</a></address>
+              </div>
+            </header>
+          <section class="article-body">{{{body}}}</section>
+        </article>
+    </script>
+
+
+  </head>
+  <body>
+
+    <header>
+      <ul>
+        <li id="beginLink">Begin</li>
+        <li id="trainingLink">Training</li>
+        <li id="projectsLink">Projects</li>
+        <li id="userStoriesLink">Stories</li>
+        <li id="aboutLink">About</li>
+        <li id="currentLink">Current</li>
+        <li id="dreamsLink">Dreams</li>
+      </ul>
+    </header>
+
+    <section class="" class="page" id="begin">
+      <h1>BEGIN</h1>
+    </section>
+
+    <section class="hidden" class="page" id="training">
+      <h1>TRAINING</h1>
+    </section>
+
+    <section class="hidden" class="page" id="projects">
+      <h1>Projects</h1>
+    </section>
+
+    <section class="hidden" class="page" id="userStories">
+      <h1>User Stories</h1>
+    </section>
+
+    <section class="hidden" class="page" id="about">
+      <h1>ABOUT</h1>
+    </section>
+
+    <section class="hidden" class="page" id="current">
+      <h1>CURRENT</h1>
+    </section>
+
+    <section class="hidden" class="page" id="dreams">
+      <h1>DREAMS</h1>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script type="text/javascript" src="js/userStories.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/append.js"></script>
+  </body>
+</html>
