@@ -1,15 +1,12 @@
-* {
-  color: black;
-  border: 2px solid black;
-}
-
 li {
   display: inline-block;
-  width: 9.5%;
+  width: 11%;
   height: 15%;
-  margin-left: .8%;
+  margin-left: 1.1%;
+  margin-top: 2%;
   border: 2px black solid;
-  height: 50px;
+  height: 30px;
+  font-size: 12px;
 }
 
 ul li {
@@ -22,4 +19,13 @@ ul li {
 .class {
   border: 2px black solid;
   width: 80%;
+}
+
+section {
+  border: 2px black solid;
+  margin-left: 9%;
+  margin-top: 10%;
+  width: 80%;
+  text-align: center;
+  height: 50%;
 }

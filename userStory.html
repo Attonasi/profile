@@ -1,67 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <title>Profile Page</title>
 
     <script id="articleTemplate" type="text/x-handlebars-template">
       <article data-author="{{author}}" data-category="{{category}}">
             <header>
               <h1>{{title}}</h1>
               <div class="byline">
-                By <address><a href="index.html" >{{author}}</a></address>
+                By <address><a href="https://google.com" >{{author}}</a></address>
               </div>
             </header>
           <section class="article-body">{{{body}}}</section>
         </article>
     </script>
 
-
   </head>
   <body>
-
     <header>
       <ul>
         <li id="beginLink">Begin</li>
         <li id="trainingLink">Training</li>
-        <li id="projectsLink">Projects</li>
-        <li id="userStoriesLink">User Stories</li>
-        <li id="aboutLink">About</li>
+        <li id="articleLink">Army</li>
+        <li id="mainLink">Projects</li>
         <li id="currentLink">Current</li>
         <li id="dreamsLink">Dreams</li>
+        <li id="aboutLink">About</li>
       </ul>
     </header>
+    <main>
 
-    <section class="" id="begin">
-      <h1>BEGIN</h1>
-    </section>
-
-    <section class="hidden" id="training">
-      <h1>TRAINING</h1>
-    </section>
-
-    <section class="hidden" id="projects">
-      <h1>Projects</h1>
-    </section>
-
-    <section class="hidden" id="userStories">
-      <h1>User Stories</h1>
-    </section>
-
-    <section class="hidden" id="about">
-      <h1>ABOUT</h1>
-    </section>
-
-    <section class="hidden" id="current">
-      <h1>CURRENT</h1>
-    </section>
-
-    <section class="hidden" id="dreams">
-      <h1>DREAMS</h1>
-    </section>
+    </main>
+    <footer>
+      <p>Argle Bargle<p>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
