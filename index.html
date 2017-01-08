@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/poly.css">
+    <script type="text/javascript" src="js/userStories.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script type="text/javascript" src="js/widthvarset.js"></script>
+
+
     <title>Profile Page</title>
 
     <script id="articleTemplate" type="text/x-handlebars-template">
@@ -18,8 +25,6 @@
           <section class="article-body">{{{body}}}</section>
         </article>
     </script>
-
-
   </head>
   <body>
 
@@ -60,13 +65,10 @@
     </section>
 
     <section class="hidden" class="page" id="dreams">
-      <h1>DREAMS</h1>
+      <canvas height="360" width="360" id="smurf"></canvas>
     </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <script type="text/javascript" src="js/userStories.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/append.js"></script>
+    <script type="text/javascript" src="js/junk.js"></script>
   </body>
 </html>

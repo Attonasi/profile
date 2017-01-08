@@ -1,8 +1,9 @@
 'use strict'
 
-var allUserStories = [];
 var currentPageID = '#begin';
 
+//USER STORY PAGE FILL
+var allUserStories = [];
 function MakeUserStory(bargle){
 
   this.title = bargle.title;
@@ -13,11 +14,11 @@ function MakeUserStory(bargle){
 }
 
 MakeUserStory.prototype.toHtml = function() {
-
   var argle = $('#articleTemplate').html();
   var bargle = Handlebars.compile(argle);
   return bargle(this);
 }
+
 userStories.forEach(function(argle){
   allUserStories.push(new MakeUserStory(argle));
 })
@@ -27,43 +28,46 @@ allUserStories.forEach(function(a){
   $('#userStories').append(a.toHtml());
 });
 
-$('#beginLink').click(function(){
+
+// NAVIGATION
+
+$('#beginLink').on('click touch', function(){
   $(currentPageID).hide();
   $('#begin').fadeIn();
   currentPageID = '#begin';
 });
 
-$('#trainingLink').click(function(){
+$('#trainingLink').on('click touch', function(){
   $(currentPageID).hide();
   $('#training').fadeIn();
   currentPageID = '#training';
 });
 
-$('#projectsLink').click(function(){
+$('#projectsLink').on('click touch', function(){
   $(currentPageID).hide();
   $('#projects').fadeIn();
   currentPageID = '#projects';
 });
 
-$('#userStoriesLink').click(function(){
+$('#userStoriesLink').on('click touch', function(){
   $(currentPageID).hide();
   $('#userStories').fadeIn();
   currentPageID = '#userStories';
 });
 
-$('#aboutLink').click(function(){
+$('#aboutLink').on('click touch', function(){
   $(currentPageID).hide();
   $('#about').fadeIn();
   currentPageID = '#about';
 });
 
-$('#currentLink').click(function(){
+$('#currentLink').on('click touch', function(){
   $(currentPageID).hide();
   $('#current').fadeIn();
   currentPageID = '#current';
 });
 
-$('#dreamsLink').click(function(){
+$('#dreamsLink').on('click touch', function(){
   $(currentPageID).hide();
   $('#dreams').fadeIn();
   currentPageID = '#dreams';

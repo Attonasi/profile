@@ -1,4 +1,4 @@
-var canvas = document.getElementById('surf')
+var canvas = document.getElementById('smurf')
 var ctx = canvas.getContext('2d')
 var W = canvas.width
 var H = canvas.height
