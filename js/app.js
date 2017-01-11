@@ -21,11 +21,38 @@ MakeUserStory.prototype.toHtml = function() {
 
 userStories.forEach(function(argle){
   allUserStories.push(new MakeUserStory(argle));
-})
+});
 
 allUserStories.forEach(function(a){
-  // $('#articleTemplate').append(a.toHtml());
   $('#userStories').append(a.toHtml());
+});
+
+//Create New User Profiles
+var allUsers = [];
+
+function MakeUser(){
+  this.userName = $('#yourName').val();
+  this.userProfession = $('#profession').val();
+  this.userUrl = $('#userUrl').val();
+  this.userDescription = $('#aboutMe').val();
+  this.lastDateUpdated = $('#lastUpdate').val();
+
+  return this;
+
+}
+$('#submitProfile').click(function(event){
+  event.preventDefault();
+  allUsers.push(new MakeUser());
+
+});
+
+$('#previewProfile').click(function(event){
+  event.preventDefault();
+  // var argle = $('profilePreviewForm').html();
+  // var bargle = Handlebars.compile(argle);
+
+  var tempUser = new MakeUser();
+  console.log(tempUser);
 });
 
 
@@ -55,10 +82,10 @@ $('#userStoriesLink').on('click touch', function(){
   currentPageID = '#userStories';
 });
 
-$('#aboutLink').on('click touch', function(){
+$('#createProfileLink').on('click touch', function(){
   $(currentPageID).hide();
-  $('#about').fadeIn();
-  currentPageID = '#about';
+  $('#createProfile').fadeIn();
+  currentPageID = '#createProfile';
 });
 
 $('#currentLink').on('click touch', function(){
