@@ -9,17 +9,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script type="text/javascript" src="js/userStories.js"></script>
-    <!-- <script type="text/javascript" src="js/widthvarset.js"></script> -->
-
 
     <title>Profile Page</title>
 
-    <script type="text/handlebars-template" id="profilePreviewForm">
+    <!-- <script type="text/x-handlebars-template" id="profilePreviewForm">
       <h2>{{userName}}<h2>
       <a href="{{userUrl}}" id="useUrl">{{userProfession}}</a>
       <p>{{aboutMe}}
       <h3>{{lastDateUpdated}}
-    </script>
+    </script> -->
 
     <script id="articleTemplate" type="text/x-handlebars-template">
       <article data-author="{{author}}" data-category="{{category}}">
@@ -81,12 +79,19 @@
           <label>
             <input type="text" id="lastUpdate" placeholder="Todays Date" required>
           </label><br>
-          <button type="click" name="button" id="previewProfile">Preview</button>
+
+          <!-- <button type="click" name="button" id="previewProfile">Preview</button> -->
           <button type="click" name="button" id="submitProfile">Submit</button>
         </form>
       </div>
-      <div class="previewProfilePage">
 
+      <div class="previewProfilePage">
+        <h1>Preview Profile</h1>
+
+        <a href="" id="userUrl"></a>
+        <h2 id="previewProfession"></h2>
+        <p id="aboutMe"></p>
+        <h3 id="lastDateUpdated"><h3>
 
       </div>
 

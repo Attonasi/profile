@@ -2,6 +2,14 @@
 
 var currentPageID = '#begin';
 
+function MakeUser(opts) {
+  this.name= opts.name,
+  this.profession= opts.profession,
+  this.userUrl= opts.userUrl,
+  this.lastUpdate= opts.lastUpdate,
+  this.body= opts.body
+}
+
 //USER STORY PAGE FILL
 var allUserStories = [];
 function MakeUserStory(bargle){
@@ -28,33 +36,38 @@ allUserStories.forEach(function(a){
 });
 
 //Create New User Profiles
-var allUsers = [];
 
-function MakeUser(){
-  this.userName = $('#yourName').val();
-  this.userProfession = $('#profession').val();
-  this.userUrl = $('#userUrl').val();
-  this.userDescription = $('#aboutMe').val();
-  this.lastDateUpdated = $('#lastUpdate').val();
+var allUsers = {};
 
-  return this;
+allUsers.create = function() {
 
-}
-$('#submitProfile').click(function(event){
-  event.preventDefault();
-  allUsers.push(new MakeUser());
+  var tempUser = new MakeUser({
+    name: $('#yourName').val(),
+    profession: $('#profession').val(),
+    userUrl: $('#userUrl').val(),
+    lastUpdate: $('#lastUpdate'),
+    body: $('#aboutMe').val()
+  });
 
-});
-
-$('#previewProfile').click(function(event){
-  event.preventDefault();
-  // var argle = $('profilePreviewForm').html();
-  // var bargle = Handlebars.compile(argle);
-
-  var tempUser = new MakeUser();
   console.log(tempUser);
+
+  $('.previewProfilePage a').attr('href', tempUser.userUrl);
+  $('.previewProfilePage a').text(tempUser.name);
+  $('#previewProfession').text(tempUser.profession);
+  $('.previewProfilePage p').text(tempUser.body);
+  $('.previewProfilePage h3').text(tempUser.lastUpdate);
+
+  return tempUser;
+};
+
+$('#submitProfile').click(function() {
+  console.log('sdflkjsdf')
+  var monkey = allUsers.create();
+  var tempUserStringified = JSON.stringify(monkey);
+  localStorage.setItem(monkey.name, tempUserStringified);
 });
 
+$('#new-form').on('change', allUsers.create);
 
 // NAVIGATION
 
