@@ -36,6 +36,7 @@ allUserStories.forEach(function(a){
 });
 
 //Create New User Profiles
+// NOTE FROM BRAE: This needs a little bit of work. The date doesn't show up in the preview and appears as [object Object].
 
 var allUsers = {};
 
@@ -70,6 +71,7 @@ $('#submitProfile').click(function() {
 $('#new-form').on('change', allUsers.create);
 
 // NAVIGATION
+// NOTE FROM BRAE: The navigation is good and everything is working well! I like how you added the mobile capabilities.
 
 $('#beginLink').on('click touch', function(){
   $(currentPageID).hide();
