@@ -6,7 +6,7 @@ li {
   border: 2px black solid;
   height: 30px;
   font-size: 12px;
-  
+
 }
 
 ul {
@@ -40,4 +40,16 @@ h1 {
 h2 {
   margin-top: 2%;
   font-size: 18px;
+}
+
+.createProfilePage {
+  float: left;
+  border: 2px black solid;
+  width: 44%;
+}
+
+.previewProfilePage {
+  border: 2px black solid;
+  width: 44%;
+  float: right;
 }
