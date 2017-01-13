@@ -1,3 +1,5 @@
+// NOTE FROM BRAE: The polygon page thing is pretty cool, but something like this could pretty badly lag someone with an older computer.
+
 var canvas = document.getElementById('smurf')
 var ctx = canvas.getContext('2d')
 var W = canvas.width

@@ -1,3 +1,7 @@
+// NOTE FROM BRAE: I understand that we're pretty much all using placeholder information at the moment,
+// so maybe just start thinking of something that you would realistically utilize on your website like a
+// personal blog or a project portfolio
+
 'use strict';
 
 var userStories = [

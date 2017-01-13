@@ -12,3 +12,5 @@ app.get('*', function(request, response){
 });
 
 app.listen(PORT, function(){});
+
+// NOTE FROM BRAE: A console.log notifying the user that the server is up and running would be nice here, but otherwise is working.
